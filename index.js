@@ -27,10 +27,12 @@ const swaggerOptions = {
  swaggerDefinition: {
 
     info: {
-      title :"Customer API",
-      description : "Customer API Information",
+      title :"User API",
+      description : "User API Information",
       contact : {
-        name : "Amazing Developer"
+        name : "Touthtek Consult",
+        phone : "+79455089190",
+        email : "olujohonsonoluwatosin@gmil.com"
       },
       servers : ["http://localhost:5200"]
     }

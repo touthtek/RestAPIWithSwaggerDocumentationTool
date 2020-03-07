@@ -74,8 +74,8 @@ router.post('/adduser', controller.adduser);
  *   post:
  *     description: User Login
  *     responses:
- *       '201':
- *         description: User has been created
+ *       '200':
+ *         description: User login successful
  *       '401' : 
  *         description : Authorisation faild
  *     consumes:
@@ -98,9 +98,9 @@ router.post('/adduser', controller.adduser);
 router.post('/login', controller.login);
 
 
- router.get('/', (req, res) => res.status(200).send({
-      message: 'Welcome to the default API route',
-    }));
+ router.get('/', (req, res) => res.status(200).redirect(
+      "/api-doc"
+    ));
 
 
  router.get('/login', (req, res) => res.status(200).sendFile(path.join(path.dirname(process.mainModule.filename), 'login.html')));
